@@ -1,13 +1,5 @@
 # Created by https://www.gitignore.io
 
-### Laravel ###
-/bootstrap/compiled.php
-.env.*.php
-.env.php
-.env
-composer.lock
-vendor/
-
 ### SublimeText ###
 # cache files for sublime text
 *.tmlanguage.cache
@@ -24,6 +16,15 @@ vendor/
 # sftp configuration file
 sftp-config.json
 
+### Laravel ###
+/bootstrap/compiled.php
+/vendor
+/node_modules
+.env.local.php
+.env.php
+.env
+composer.phar
+composer.lock
 
 ### PhpStorm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
