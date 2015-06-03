@@ -27,6 +27,7 @@ function calcRoute() {
         if (status == google.maps.DirectionsStatus.OK) {
             directionsDisplay.setDirections(response);
             calcTarifa(response.routes[0].legs[0].distance.text);
+            displayTarifa(status);
         }
     });
 }

@@ -5,43 +5,32 @@
 @stop
 
 @section('css')
-
+  {{HTML::style('css/map.css')}}
+  {{HTML::style('css/sidebar.css')}}
 @stop
 
 @section('content')
+
+    <!-- Side bar -->
+    <div class="col-md-4 side-bar">
+      @include('templates.sidebar.header')
+      @include('templates.sidebar.directions-form')
+      @include('templates.sidebar.results')
+      @include('templates.sidebar.observations')
+      @include('templates.sidebar.footer')
+    </div>
+
   <div class="container-fluid">
-    <div class="col-md-3 side-bar">
-      <h1>Taxímetro Online</h1>
-
-      <!-- Input da rota -->
-      <form action="#" method="GET">
-        <div>
-          <label for="origem">Origem:</label>
-          <input type="text" name="origem" id="origem" value="Meier, RJ">
-        </div>
-        <div>
-          <label for="destino">Destino:</label>
-          <input type="text" name="destino" id="destino" value="Centro, RJ">
-        </div>
-
-        <button type="button" onclick="calcRoute(); return false;">Calcular!</button>
-      </form>
-
-      <!-- Mostra os resultados -->
-      <div id="resultados">
-        <p>Distancia: <span id="displayDistancia"></span></p>
-        <p>Tarifa estimada: <span id="displayTarifa"></span></p>
-      </div>
-    </div>
-    <div class="col-md-9 map-container">
-      <!-- Mapa -->
+    <!-- Mapa -->
+    <div class="col-md-8 map-container">
       <div id="map-canvas"></div>
-    </div>
-  </div>
+    </div><!-- /.map-container -->
+  </div><!-- /.container-fluid -->
 @stop
 
 @section('js')
   {{HTML::script('js/initialize.js')}}
+  {{HTML::script('js/displayTarifa.js')}}
   {{HTML::script('js/calcRoute.js')}}
   {{HTML::script('js/calcTarifa.js')}}
 @stop
