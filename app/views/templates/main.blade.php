@@ -19,7 +19,7 @@
 
     @yield('css')
 
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&signed_in=true"></script>
   </head>
   <body>
     @yield('content')

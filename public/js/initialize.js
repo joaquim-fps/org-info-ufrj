@@ -28,6 +28,26 @@ function initialize() {
 
     directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
 
+    // Get inputs for auto complete.
+    var inputOrigem = document.getElementById('origem'),
+        inputDestino = document.getElementById('destino');
+
+    // Set bounds for auto complete.
+    rioDeJaneiro = new google.maps.LatLngBounds(
+                            new google.maps.LatLng(-22.8820913, -43.238735),
+                            new google.maps.LatLng(-22.8820913, -43.238735)
+                        );
+
+    // Declare options for auto complete.
+    var options = {
+        bounds: rioDeJaneiro,
+        types: ['address']
+    };
+
+    // Instantiate auto complete service.
+    autoCompleteOrigem = new google.maps.places.Autocomplete(inputOrigem, options);
+    autoCompleteDestino = new google.maps.places.Autocomplete(inputDestino, options);
+
     // Create a listener for updating the map when directions change through dragging the markers on the map
     google.maps.event.addListener(directionsDisplay, 'directions_changed', function() {
         //updates the inputs with the new locations

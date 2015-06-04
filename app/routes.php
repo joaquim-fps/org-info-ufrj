@@ -12,3 +12,14 @@
 */
 
 Route::get('/', "HomeController@getHome");
+
+Route::group(array("before" => "guest"), function() {
+    Route::post('login', "UserController@postLogIn");
+    Route::post('sign-up', "UserController@postSignUp");
+});
+
+Route::group(array("after" => "user"), function() {
+    Route::post('save-profile', "UserController@postChangeProfile");
+    Route::get('logout', "UserController@getLogOut");
+});
+

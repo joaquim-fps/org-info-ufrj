@@ -10,4 +10,5 @@
   </div>
 
   <button class="btn btn-warning" type="button" onclick="calcRoute(); return false;">Calcular</button>
+  <button class="btn btn-info pull-right" type="button" onclick="reverseRoute(); return false;">Inverter</button>
 </form>

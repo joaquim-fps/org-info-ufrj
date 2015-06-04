@@ -2,15 +2,25 @@
   padding: 0;
 }
 
+.side-bar {
+  position: relative;
+}
+
 /*------------ TITULO ------------*/
 header {
   background-color: #333333;
 }
 
+.user-dropdown {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
 h1 {
   margin: 0 0 25px;
   padding: 15px;
-  text-align: center;
+  font-size: 24px;
 }
 
 h1 a:link, h1 a:visited, h1 a:active, h1 a:hover {
@@ -20,6 +30,17 @@ h1 a:link, h1 a:visited, h1 a:active, h1 a:hover {
 
 h1 a:hover, h1 a:active {
   color: white;
+}
+
+@media (min-width: 1500px) {
+  h1 {
+    text-align: center;
+    /*font-size: 36px;*/
+  }
+
+  /*.user-dropdown {*/
+    /*top: 15px;*/
+  /*}*/
 }
 
 /*---------- FORM E RESULTADO -------------*/
@@ -45,7 +66,7 @@ form div {
   margin-bottom: 10px;
 }
 
-form {
+.side-bar form {
   color: black;
   font-weight: bold;
 }
