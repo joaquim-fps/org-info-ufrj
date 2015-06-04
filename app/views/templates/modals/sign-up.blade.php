@@ -8,10 +8,13 @@
         <h4 class = "modal-title text-center">Cadastrar</h4>
       </div>
       <div class = "modal-body">
+        <!-- ALERTS -->
+        @include('templates.alerts.sign-up')
+
         <form action = "{{URL::action("UserController@postSignUp")}}" method = "post" class = "sign-up-form-modal">
           <div class = "form-group">
             <label class = "control-label" for = "email">Email:</label>
-            <input class = "form-control" type = "email" id = "email" name = "email" placeholder="user@email.com" value = "">
+            <input class = "form-control" type = "email" id = "email" name = "email" placeholder="user@email.com" value = "{{{Input::old('email')}}}">
           </div>
 
           <div class = "form-group">

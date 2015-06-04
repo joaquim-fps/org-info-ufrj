@@ -14,4 +14,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	protected $softDelete = true;
 	protected $fillable = array('email', 'name');
 
+	public function searches() {
+		return $this->hasMany('Search');
+	}
+
+	public function locales() {
+		return $this->hasMany('Locale');
+	}
+
 }

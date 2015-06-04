@@ -1,7 +1,7 @@
 <header>
   <h1>
     <a href="{{URL::action('HomeController@getHome')}}">
-      Taxímetro Online
+      Taximetro Online
     </a>
   </h1>
   <div class="dropdown dropdown-menu-right pull-right user-dropdown">
@@ -18,7 +18,7 @@
         <li role="presentation"><a role="menuitem" tabindex="0" href="#" data-toggle="modal" data-target=".sign-in-modal">Entrar</a></li>
         <li role="presentation"><a role="menuitem" tabindex="1" href="#" data-toggle="modal" data-target=".sign-up-modal">Cadastrar</a></li>
       @else
-        <li role="presentation"><a role="menuitem" tabindex="0" data-toggle="modal" data-target=".profile-modal">Perfil</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="0" href="#" data-toggle="modal" data-target=".profile-modal">Perfil</a></li>
         <li role="presentation"><a role="menuitem" tabindex="1" href="{{URL::action('UserController@getLogOut')}}">Sair</a></li>
       @endif
     </ul>

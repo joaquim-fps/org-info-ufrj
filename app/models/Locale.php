@@ -14,6 +14,9 @@ class Locale extends Eloquent {
 
     protected $table = 'locales';
     protected $softDelete = true;
-    protected $fillable = array('address');
+    protected $fillable = array('address', 'name');
 
+    public function user() {
+        return $this->hasOne('User');
+    }
 }

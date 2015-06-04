@@ -16,4 +16,8 @@ class Search extends Eloquent {
     protected $softDelete = true;
     protected $fillable = array('origin', 'destination');
 
+    public function user() {
+        return $this->hasOne('User');
+    }
+
 }

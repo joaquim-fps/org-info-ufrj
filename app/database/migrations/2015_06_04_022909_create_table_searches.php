@@ -12,7 +12,17 @@ class CreateTableSearches extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('searches', function(Blueprint $table) {
+			$table->bigIncrements('id');
+			$table->bigInteger('user_id')->unsigned()->nullable();
+			$table->mediumText('origin');
+			$table->mediumText('destination');
+
+			$table->timestamps();
+			$table->softDeletes();
+
+			$table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
+		});
 	}
 
 	/**
@@ -22,7 +32,7 @@ class CreateTableSearches extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('searches');
 	}
 
 }

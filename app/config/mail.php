@@ -15,6 +15,7 @@ return array(
 	|
 	*/
 
+
 	'driver' => 'smtp',
 
 	/*
@@ -28,7 +29,7 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.mailgun.org',
+	'host' => 'smtp.gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +81,7 @@ return array(
 	|
 	*/
 
-	'username' => null,
+	'username' => "suporte.r3manager@gmail.com",
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +94,7 @@ return array(
 	|
 	*/
 
-	'password' => null,
+	'password' => "renatorafael",
 
 	/*
 	|--------------------------------------------------------------------------

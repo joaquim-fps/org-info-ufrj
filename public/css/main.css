@@ -3,3 +3,93 @@
     font-size: 16px;
     background-color: rgb(255, 222, 1);
   }
+
+/*------------ HEADER ------------*/
+header {
+  background-color: #333333;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.user-dropdown {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
+h1 {
+  margin: 0;
+  padding: 15px;
+  font-size: 24px;
+}
+
+h1 a:link,
+h1 a:visited,
+h1 a:active,
+h1 a:hover {
+  color: #e5e5e5;
+  text-decoration: none;
+}
+
+h1 a:hover,
+h1 a:active {
+  color: white;
+}
+
+@media (min-width: 992px) {
+  header {
+    width: 33.333333%;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1500px) {
+  h1 {
+    text-align: center;
+  }
+}
+
+/*-----------FOOTER----------*/
+
+  footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background-color: #333333;
+  }
+
+  footer p {
+    color: #e5e5e5;
+    font-size: 12px;
+  }
+
+  footer p:first-child {
+    padding-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  footer p:last-child {
+    margin: 0;
+   padding-bottom: 20px;
+  }
+
+  @media (min-width: 992px) {
+    footer {
+      font-size: 10px;
+      width: 33.33333%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    footer {
+      width: 25%;
+    }
+  }

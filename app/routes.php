@@ -12,14 +12,17 @@
 */
 
 Route::get('/', "HomeController@getHome");
+Route::get("activate-user/{id}/{activation_code}", "UserController@getActivateUser");
 
 Route::group(array("before" => "guest"), function() {
-    Route::post('login', "UserController@postLogIn");
+    Route::post('login/{inputs}', "UserController@postLogIn");
     Route::post('sign-up', "UserController@postSignUp");
 });
 
 Route::group(array("after" => "user"), function() {
-    Route::post('save-profile', "UserController@postChangeProfile");
+    Route::get('last-searches', "SearchController@getLastUserSearches");
     Route::get('logout', "UserController@getLogOut");
+    Route::post('save-profile', "UserController@postChangeProfile");
+    Route::post('password-recovery', 'UserController@postPasswordRecovery');
 });
 

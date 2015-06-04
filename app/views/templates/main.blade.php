@@ -22,7 +22,11 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&signed_in=true"></script>
   </head>
   <body>
+    @include('templates.header')
+
     @yield('content')
+
+    @include('templates.footer')
 
     {{HTML::script('libs/jquery/jquery.min.js')}}
     {{HTML::script('libs/bootstrap/js/bootstrap.min.js')}}

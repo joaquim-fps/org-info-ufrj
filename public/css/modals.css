@@ -1,3 +1,11 @@
 .modal [type=submit] {
   margin-bottom: 10px;
 }
+
+.profile-modal .btn-danger {
+  margin-left: 3.5%;
+}
+
+.last-searches-modal p {
+  margin-top: 15px;
+}

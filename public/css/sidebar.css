@@ -4,46 +4,10 @@
 
 .side-bar {
   position: relative;
+  margin-top: 70px;
 }
 
-/*------------ TITULO ------------*/
-header {
-  background-color: #333333;
-}
-
-.user-dropdown {
-  position: absolute;
-  right: 15px;
-  top: 10px;
-}
-
-h1 {
-  margin: 0 0 25px;
-  padding: 15px;
-  font-size: 24px;
-}
-
-h1 a:link, h1 a:visited, h1 a:active, h1 a:hover {
-  color: #e5e5e5;
-  text-decoration: none;
-}
-
-h1 a:hover, h1 a:active {
-  color: white;
-}
-
-@media (min-width: 1500px) {
-  h1 {
-    text-align: center;
-    /*font-size: 36px;*/
-  }
-
-  /*.user-dropdown {*/
-    /*top: 15px;*/
-  /*}*/
-}
-
-/*---------- FORM E RESULTADO -------------*/
+/*---------- FORM, RESULTADO E OBS -------------*/
 
 form, #resultados{
   margin: 0 20px;
@@ -91,7 +55,8 @@ form div {
   margin: 0;
 }
 
-#resultados p, .observations p {
+#resultados p,
+.observations p {
   font-weight: bold;
   margin: 10px 0;
 }
@@ -106,4 +71,25 @@ form div {
 
 span {
   font-weight: normal;
+}
+
+.hora-parada-group .row {
+  margin: 0;
+}
+
+.hora-parada-group .col-xs-6 {
+  padding-left: 0;
+}
+
+.hora-parada-group .col-xs-6:last-child {
+  padding-right: 0;
+  margin-bottom: 25px;
+}
+
+#check-hora-parada + #hora-parada {
+  display: none;
+}
+
+#check-hora-parada:checked + #hora-parada {
+  display: block;
 }
