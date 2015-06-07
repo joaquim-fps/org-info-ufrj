@@ -99,6 +99,9 @@ class UserController extends BaseController {
                 $user->status = 0;
                 $user->save();
 
+                if (!Auth::check())
+                    Auth::attempt(array("email" => $user->email, "password" => $user->password));
+
                 return Redirect::action("HomeController@getHome")->with("activation_succeeded", true);
             }else{
                 return Redirect::action("HomeController@getHome")->with("invalid_activation_code", true);
