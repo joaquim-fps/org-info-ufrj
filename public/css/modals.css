@@ -1,11 +1,78 @@
+.modal {
+  overflow: auto;
+}
+
 .modal [type=submit] {
   margin-bottom: 10px;
 }
+
+/*------- PROFILE MODAL --------*/
 
 .profile-modal .btn-danger {
   margin-left: 3.5%;
 }
 
+/*------- LAST SEARCHES MODAL -------*/
+
 .last-searches-modal p {
   margin-top: 15px;
+}
+
+.last-searches-modal .fail-text {
+  margin: 25px;
+}
+
+.last-searches-modal .modal-body {
+  padding: 0;
+}
+
+.last-searches-modal .search-result {
+  padding-bottom: 10px;
+}
+
+.last-searches-modal .search-result:nth-child(2n) {
+  background-color: #f2f2f2;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.last-searches-modal .search-result:last-child {
+  padding-bottom: 15px;
+  border-bottom: 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.search-result:nth-child(n):hover {
+  background-color: #cccccc;
+}
+
+.last-searches-modal .search-result a:link,
+.last-searches-modal .search-result a:hover,
+.last-searches-modal .search-result a:active,
+.last-searches-modal .search-result a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.search-result .route {
+  padding: 0;
+}
+
+.search-result .origin {
+  margin-right: 10px;
+  padding: 0;
+}
+
+.search-result .destination {
+  margin-left: 10px;
+  padding: 0;
+}
+
+.search-result .time {
+  font-size: 0.8em;
+}
+
+.search-result .timestamp {
+  margin-left: 5px;
+  font-style: italic;
 }

@@ -9,6 +9,16 @@
 
 /*---------- FORM, RESULTADO E OBS -------------*/
 
+.btn-warning {
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+
+.btn-warning:hover {
+  background-color: #d58512;
+  border-color: #ab6807;
+}
+
 form, #resultados{
   margin: 0 20px;
 }
@@ -50,8 +60,11 @@ form div {
   border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.erro p {
+.erro h4 {
   font-weight: bold;
+}
+
+.erro p {
   margin: 0;
 }
 

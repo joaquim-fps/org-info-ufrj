@@ -17,6 +17,6 @@ class Locale extends Eloquent {
     protected $fillable = array('address', 'name');
 
     public function user() {
-        return $this->hasOne('User');
+        return $this->belongsTo('User');
     }
 }

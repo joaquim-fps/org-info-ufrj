@@ -11,3 +11,9 @@ Taxímetro Online - Calculadora de Tarifas de Táxi
 Bruno Ferraz de Almeida Couto<br>
 Joaquim Ferreira Palmeira da Silva <br>
 Pedro de Aragão Schmidt
+
+<b>Funcionalidades que ficaram faltando:</b>
+
+Lista de Localidades do Usuário<br>
+Sugestão de rotas mais procuradas<br>
+Atualização automática dos valores para cálculo da tarifa

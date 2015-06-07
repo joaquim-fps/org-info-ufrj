@@ -44,6 +44,7 @@
   {{HTML::script('js/maps/calcRoute.js')}}
   {{HTML::script('js/maps/calcTarifa.js')}}
   {{HTML::script('js/maps/reverseRoute.js')}}
+  {{HTML::script('js/maps/saveSearch.js')}}
 
   @if(!Auth::check())
     {{HTML::script('js/modals/signInValidation.js')}}

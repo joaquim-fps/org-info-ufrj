@@ -11,8 +11,6 @@ function calcTarifa(distance) {
 
     document.getElementById('displayDistancia').innerHTML = distance;
 
-    console.log(quantHorasParadas);
-
     if (horaParadaIsChecked && !isNaN(quantHorasParadas)) {
         document.getElementById('displayTarifa').innerHTML = "R$ " + (bandeirada + distanciaPercorrida * quilometroRodado + horaParada * quantHorasParadas).toFixed(2).replace(".", ",");
     } else {

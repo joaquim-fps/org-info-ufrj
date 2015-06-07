@@ -40,19 +40,21 @@ function initialize() {
 
     // Declare options for auto complete.
     var options = {
-        bounds: rioDeJaneiro,
-        types: ['address']
+        bounds: rioDeJaneiro
     };
 
     // Instantiate auto complete service.
-    autoCompleteOrigem = new google.maps.places.Autocomplete(inputOrigem, options);
-    autoCompleteDestino = new google.maps.places.Autocomplete(inputDestino, options);
+    autoCompleteOrigem = new google.maps.places.SearchBox(inputOrigem, options);
+    autoCompleteDestino = new google.maps.places.SearchBox(inputDestino, options);
 
     // Create a listener for updating the map when directions change through dragging the markers on the map
     google.maps.event.addListener(directionsDisplay, 'directions_changed', function() {
         //updates the inputs with the new locations
-        document.getElementById('origem').value = directionsDisplay.getDirections().routes[0].legs[0].start_address;
-        document.getElementById('destino').value = directionsDisplay.getDirections().routes[0].legs[0].end_address;
+        var originInput =  document.getElementById('origem'),
+            destinationInput =  document.getElementById('destino');
+
+        originInput.value = directionsDisplay.getDirections().routes[0].legs[0].start_address;
+        destinationInput.value = directionsDisplay.getDirections().routes[0].legs[0].end_address;
 
         //calculates the new distance and price
         calcTarifa(directionsDisplay.getDirections().routes[0].legs[0].distance.text);

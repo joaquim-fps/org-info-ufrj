@@ -13,6 +13,7 @@
 
 Route::get('/', "HomeController@getHome");
 Route::get("activate-user/{id}/{activation_code}", "UserController@getActivateUser");
+Route::post('create-search', 'SearchController@postCreateSearch');
 
 Route::group(array("before" => "guest"), function() {
     Route::post('login/{inputs}', "UserController@postLogIn");

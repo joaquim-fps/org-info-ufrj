@@ -1,7 +1,7 @@
 <header>
   <h1>
     <a href="{{URL::action('HomeController@getHome')}}">
-      Taximetro Online
+      Taxímetro Online
     </a>
   </h1>
   <div class="dropdown dropdown-menu-right pull-right user-dropdown">

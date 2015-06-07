@@ -5,5 +5,6 @@
 </div>
 
 <div class="erro bg-danger">
-  <p class="text-danger">Algo deu errado!</p>
+  <h4 class="text-danger">Oops!</h4>
+  <p class="text-danger">Algo deu errado. Tente novamente com outros endereços.</p>
 </div>
