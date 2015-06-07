@@ -3,7 +3,8 @@
  */
 function calcTarifa(distance) {
     var bandeirada = 5.2,
-        quilometroRodado = 2.05,
+        quilometroRodado1 = 2.05,
+        quilometroRodado2 = 2.46,
         horaParada = 25.83,
         quantHorasParadas = parseInt(document.getElementById('hora-parada').value) + parseFloat(document.getElementById('minuto-parado').value/60),
         distanciaPercorrida = parseFloat(distance.replace(".", "").replace(",",".")),
@@ -12,9 +13,11 @@ function calcTarifa(distance) {
     document.getElementById('displayDistancia').innerHTML = distance;
 
     if (horaParadaIsChecked && !isNaN(quantHorasParadas)) {
-        document.getElementById('displayTarifa').innerHTML = "R$ " + (bandeirada + distanciaPercorrida * quilometroRodado + horaParada * quantHorasParadas).toFixed(2).replace(".", ",");
+        document.getElementById('displayBandeira1').innerHTML = "R$ " + (bandeirada + distanciaPercorrida * quilometroRodado1 + horaParada * quantHorasParadas).toFixed(2).replace(".", ",");
+        document.getElementById('displayBandeira2').innerHTML = "R$ " + (bandeirada + distanciaPercorrida * quilometroRodado2 + horaParada * quantHorasParadas).toFixed(2).replace(".", ",");
     } else {
-        document.getElementById('displayTarifa').innerHTML = "R$ " + (bandeirada + distanciaPercorrida * quilometroRodado).toFixed(2).replace(".", ",");
+        document.getElementById('displayBandeira1').innerHTML = "R$ " + (bandeirada + distanciaPercorrida * quilometroRodado1).toFixed(2).replace(".", ",");
+        document.getElementById('displayBandeira2').innerHTML = "R$ " + (bandeirada + distanciaPercorrida * quilometroRodado2).toFixed(2).replace(".", ",");
     }
 }
 

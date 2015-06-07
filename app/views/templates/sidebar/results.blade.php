@@ -1,7 +1,8 @@
 <!-- Mostra os resultados -->
 <div id="resultados">
   <p>Distancia: <span id="displayDistancia"></span></p>
-  <p>Tarifa estimada: <span id="displayTarifa"></span></p>
+  <p>Bandeira 1: <span id="displayBandeira1"></span></p>
+  <p>Bandeira 2: <span id="displayBandeira2"></span></p>
 </div>
 
 <div class="erro bg-danger">
