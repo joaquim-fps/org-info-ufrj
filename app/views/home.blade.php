@@ -4,12 +4,6 @@
   Taxímetro Online
 @stop
 
-@section('css')
-  {{HTML::style('css/map.css')}}
-  {{HTML::style('css/sidebar.css')}}
-  {{HTML::style('css/modals.css')}}
-@stop
-
 @section('content')
   <!-- Side bar -->
   <div class="col-md-4 col-lg-3 side-bar">
@@ -39,25 +33,10 @@
 @stop
 
 @section('js')
-  {{HTML::script('js/maps/initialize.js')}}
-  {{HTML::script('js/maps/displayTarifa.js')}}
-  {{HTML::script('js/maps/calcRoute.js')}}
-  {{HTML::script('js/maps/calcTarifa.js')}}
-  {{HTML::script('js/maps/reverseRoute.js')}}
-  {{HTML::script('js/maps/saveSearch.js')}}
-
-  @if(!Auth::check())
-    {{HTML::script('js/modals/signInValidation.js')}}
-    {{HTML::script('js/modals/signUpValidation.js')}}
-  @else
-    {{HTML::script('js/modals/changeProfileValidation.js')}}
-    {{HTML::script('js/modals/showSearchesModal.js')}}
-    {{HTML::script('js/modals/showPasswordRecoveryModal.js')}}
-    {{HTML::script('js/modals/passwordRecoveryValidation.js')}}
-  @endif
-
   @if(Session::has('profile_change_successful') || Session::has('profile_change_failed'))
-    {{HTML::script('js/modals/showProfileModal.js')}}
+    <script>
+      showProfileModal();
+    </script>
   @endif
 
   @if(Session::has('password_recovery_successful') || Session::has('password_recovery_failed'))
@@ -67,14 +46,20 @@
   @endif
 
   @if(Session::has('sign_up_succeeded') || Session::has('activation_succeded'))
-    {{HTML::script('js/modals/showConfirmationModal.js')}}
+    <script>
+      showConfirmationModal();
+    </script>
   @endif
 
   @if(Session::has('sign_up_failed'))
-    {{HTML::script('js/modals/showSignUpModal.js')}}
+    <script>
+      showSignUpModal();
+    </script>
   @endif
 
   @if(Session::has('login_failed'))
-    {{HTML::script('js/modals/showSignInModal.js')}}
+    <script>
+      showSignInModal();
+    </script>
   @endif
 @stop

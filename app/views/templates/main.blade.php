@@ -8,7 +8,7 @@
     <title>@yield('title')</title>
 
     {{HTML::style('libs/bootstrap/css/bootstrap.min.css')}}
-    {{HTML::style('css/main.css')}}
+    {{HTML::style('css/all.min.css')}}
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,6 +30,7 @@
 
     {{HTML::script('libs/jquery/jquery.min.js')}}
     {{HTML::script('libs/bootstrap/js/bootstrap.min.js')}}
+    {{HTML::script('js/all.min.js')}}
     @yield('js')
   </body>
 </html>
