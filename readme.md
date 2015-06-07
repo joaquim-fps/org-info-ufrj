@@ -14,6 +14,6 @@ Pedro de Aragão Schmidt
 
 <b>Funcionalidades que ficaram faltando:</b>
 
-Lista de Localidades do Usuário<br>
+Lista de localidades do usuário<br>
 Sugestão de rotas mais procuradas<br>
 Atualização automática dos valores para cálculo da tarifa
