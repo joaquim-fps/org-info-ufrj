@@ -16,4 +16,7 @@ Pedro de Aragão Schmidt
 
 Lista de localidades do usuário<br>
 Sugestão de rotas mais procuradas<br>
-Atualização automática dos valores para cálculo da tarifa
+Atualização automática dos valores para cálculo da tarifa <br>
+
+<b>Link para o site</b>
+joaquim.ejcm.com.br
