@@ -18,5 +18,6 @@ Lista de localidades do usuário<br>
 Sugestão de rotas mais procuradas<br>
 Atualização automática dos valores para cálculo da tarifa <br>
 
-<b>Link para o site</b>
+<b>Link para o site:</b>
+
 joaquim.ejcm.com.br
