@@ -25,7 +25,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'taximetro-online',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => 'leoipe123J',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

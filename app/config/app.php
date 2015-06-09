@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://taximetro-online.com.br',
 
 	/*
 	|--------------------------------------------------------------------------
